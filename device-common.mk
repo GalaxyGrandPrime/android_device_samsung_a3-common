@@ -29,11 +29,6 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/a3-common/overlay
 # Include package config fragments
 include $(LOCAL_PATH)/product/*.mk
 
-# append the updater uri to the product properties if set
-ifneq ($(CM_UPDATER_OTA_URI),)
-	PRODUCT_PROPERTY_OVERRIDES += $(CM_UPDATER_OTA_URI)
-endif
-
 # Dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
